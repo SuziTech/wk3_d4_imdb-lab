@@ -4,17 +4,20 @@ require_relative('models/star')
 
 require('pry')
 
+Casting.delete_all()
+Star.delete_all()
+Movie.delete_all()
 
 movie1 = Movie.new({'title' => 'Star Wars', 'genre' => 'Space Adventure', 'budget' => 250000})
 movie1.save
 
-movie2 = Movie.new({'title' => 'A Fistfull of Dollars', 'genre' => 'Spagetti Western', 'budget' => 250000})
+movie2 = Movie.new({'title' => 'A Fistfull of Dollars', 'genre' => 'Spagetti Western', 'budget' => 150000})
 movie2.save
 
-movie3 = Movie.new({'title' => 'Dirty Harry', 'genre' => 'Detective Drama', 'budget' => 250000})
+movie3 = Movie.new({'title' => 'Dirty Harry', 'genre' => 'Detective Drama', 'budget' => 350000})
 movie3.save
 
-star1 = Star.new({'first_name' => 'Harrison', 'last_name' => 'Ford'1})
+star1 = Star.new({'first_name' => 'Harrison', 'last_name' => 'Ford'})
 star1.save
 
 star2 = Star.new({'first_name' => 'Carrie', 'last_name' => 'Fisher'})

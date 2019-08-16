@@ -1,5 +1,6 @@
 require_relative("../db/sql_runner")
 require_relative("movie")
+require_relative("star")
 
 class Casting
 
@@ -36,7 +37,15 @@ class Casting
     SqlRunner.run(sql, values)
   end
 
-
+  # def self.movie_stars_fees()
+  #   sql = "SELECT SUM (fee) AS total FROM castings
+  #           WHERE movie_id = $1
+  #           "
+  #   values = [@id]
+  #   total_stars_fees_data = SqlRunner.run(sql, values)
+  #   total_stars_fees = total_stars_fees_data.map {|total_stars_fees_data| Casting.new(total_stars_fees_data)}
+  #   return total_stars_fees
+  # end
 
 
 
